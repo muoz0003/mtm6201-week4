@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Responsive Images</h1>
+        <section>
+            <h2>Same Image with different size</h2>
+            <img srcset="https://placedog.net/320/320 320w,
+                        https://placedog.net/640/400 640w,
+                        https://placedog.net/1024/600 1024w"
+                sizes="
+                    (max-width: 320px) 320px,
+                    (max-width: 640px) 640px,
+                    (max-width: 1024px) 1024px" 
+                src="https://placedog.net/600/400" alt="dog placeholder"/>
+        </section>
+        <section>
+            <h2>Same size with different resolution</h2>
+            <img srcset="https://placedog.net/320 1x,
+                        https://placedog.net/640 2x,
+                        https://placedog.net/960 3x"
+                src="https://placedog.net/600" alt="dog placeholder"/>
+        </section>
+        <section>
+            <h2>Art Direction</h2>
+            <picture>
+                <source media="(min-width: 900px)" srcset="images/fall-dog-1200.jpg">
+                <source media="(min-width: 640px)" srcset="images/fall-dog-900.jpg">
+                <source media="(min-width: 320px)" srcset="images/fall-dog-640.jpg">
+                <img src="images/fall-dog-900.jpg" alt="dog sitting on a sofa"/>
+            </picture>
+        
+        </section>
+    </div>
+</body>
+</html>
